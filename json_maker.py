@@ -4,10 +4,10 @@ import time
 
 def gen_data():
     main_data = []
-    panels = 200
+    panels = 100
     measurements = 10
-    device_codes = 50
-    zones = 10
+    device_codes = 20
+    zones = 40
     count = 0
     start_time = time.time()
 
@@ -34,7 +34,6 @@ def gen_data():
                             "name": "Down Direction Selected",
                             "alarm_name": "null",
                             "alarm_state": "null",
-                            "uuid": f"{panel}-{mm}-{device_code}-{zone}",
                             "unique_tag": f"{device_code}-{zone}"
                         },
                         "fields": {
