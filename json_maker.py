@@ -40,7 +40,7 @@ def gen_data():
                         }
                         count += 1
                         main_data.append(data_dict)
-        logger.debug(f"[JSON Making Process]: {time.time() - start_time}")
+        logger.debug(f"[JSON Making Process Time]: {time.time() - start_time}")
         logger.debug(f"{count}")
         return main_data
     except Exception as e:

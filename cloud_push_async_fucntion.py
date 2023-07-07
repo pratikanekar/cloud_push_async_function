@@ -22,13 +22,15 @@ async def main():
 
 
 try:
+    logger.info(f"Started Creation of json files.....")
     start_time = time.time()
     main_data = gen_data()
     final_json_data = dumps(main_data)
     # Run the asynchronous event loop
+    logger.info(f"Started Cloud Pushing......")
     loop = asyncio.get_event_loop()
     loop.run_until_complete(main())
 
-    logger.debug(f"Cloud Push Process Time : {time.time() - start_time}")
+    logger.debug(f"[Cloud Push Process Time] : {time.time() - start_time}")
 except Exception as e:
     logger.error(f"{e}")
